@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 function App() {
   const [number, setNumber] = useState(0)
-  const [name, setName] = useState("Fatih")
+  const [firstName, setFirstName] = useState("Fatih")
 
   useEffect(() => {
     console.log("Component mount edildi!")
@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     console.log("Name state güncellendi!")
-  }, [name])
+  }, [firstName])
 
   return (
     <>
@@ -23,8 +23,8 @@ function App() {
 
       <hr />
 
-      <h1>{name}</h1>
-      <button onClick={() => setName("Ali")}>Click</button>
+      <h1>{firstName}</h1>
+      <button onClick={() => setFirstName("Ali")}>Click</button>
     </>
   )
 }
